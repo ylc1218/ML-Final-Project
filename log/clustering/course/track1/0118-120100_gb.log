@@ -1,0 +1,44 @@
+0118-120100-GB
+track1 train_course/14.csv test_course/14.csv output/course_14
+col used:['enrollment_id', 'take_course_num', 'user_log_num', 'log_num', 'server_nagivate', 'server_access', 'server_problem', 'browser_access', 'browser_problem', 'browser_page_close', 'browser_video', 'server_discussion', 'server_wiki', 'day_diff', 'valid_vlogcnt', 'log_day_1', 'log_day_2', 'log_day_3', 'log_day_4', 'log_day_5', 'first_access', 'last_access', 'course_access_diff', 'video_obj', 'problem_obj', 'discussion_obj', 'take_course_num_1', 'longest_offline', 'longest_online']
+-----------
+load trainingX with shape = (8198, 27)
+load testingX with shape = (2124, 27)
+-----------
+[300, 2, 'auto']:0118-120100
+ =0.94820990882,0118-120114
+
+[300, 2, 0.5]:0118-120114
+ =0.948777917348,0118-120122
+
+[300, 3, 'auto']:0118-120122
+ =0.945175733598,0118-120141
+
+[300, 3, 0.5]:0118-120141
+ =0.947132693624,0118-120152
+
+[300, 4, 'auto']:0118-120152
+ =0.94263306841,0118-120215
+
+[300, 4, 0.5]:0118-120215
+ =0.944616335581,0118-120226
+
+[400, 2, 'auto']:0118-120226
+ =0.947815347253,0118-120241
+
+[400, 2, 0.5]:0118-120241
+ =0.947923304619,0118-120249
+
+[400, 3, 'auto']:0118-120249
+ =0.944422752564,0118-120311
+
+[400, 3, 0.5]:0118-120311
+ =0.945781158994,0118-120322
+
+[400, 4, 'auto']:0118-120322
+ =0.940359497354,0118-120351
+
+[400, 4, 0.5]:0118-120351
+ =0.941977137474,0118-120405
+
+best:[300, 2, 0.5] 0.948777917348
