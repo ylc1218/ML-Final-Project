@@ -1,3 +1,7 @@
+"""
+    Copyright
+    https://github.com/emanuele/kaggle_pbr/blob/master/blend.py
+"""
 import csv
 import numpy
 import sys
@@ -13,17 +17,17 @@ if(len(sys.argv) < 5): #track, train_fileName, test_fileName, output_fileName
 	exit(1)
 
 timeStr = datetime.datetime.now().strftime("%m%d-%I%M%S")
-log_file_name = timeStr+"_blend.log"
+log_file_name = timeStr+"_stacking.log"
 log_f = open(log_file_name, 'w', 0)
 
 #assign variables
 track = sys.argv[1]
 train_fName=sys.argv[2]
 test_fName=sys.argv[3]
-output_fName=sys.argv[4]+'_log_blend_'+track+'.csv'
+output_fName=sys.argv[4]+'_stacking_'+track+'.csv'
 
 print('Log file name: '+log_file_name)
-print >>log_f, timeStr+'-blend'
+print >>log_f, timeStr+'-stacking'
 print >>log_f, track+" "+train_fName+" "+test_fName+" "+output_fName 
 
 
