@@ -1,0 +1,5 @@
+
+# ignore for OS X file
+*.DS_Store
+[Tt]humbs.db
+
