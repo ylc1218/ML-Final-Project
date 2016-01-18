@@ -1,0 +1,139 @@
+0117-020042-GB
+track1 train_cluster_2.csv test_cluster_2.csv cluster5_once_2
+col used:['ID', 'take_course_num', 'user_log_num', 'course_log_num', 'take_user_num', 'log_num', 'server_nagivate', 'server_access', 'server_problem', 'browser_access', 'browser_problem', 'browser_page_close', 'browser_video', 'server_discussion', 'server_wiki', 'day-diff', 'valid-vlogcnt', 'log_day_1', 'log_day_2', 'log_day_3', 'log_day_4', 'log_day_5', 'first_access', 'last_access', 'course_start_time', 'course_access_diff', 'video_obj', 'problem_obj', 'discussion_obj', 'take_course_num', 'longest_offline', 'longest_online']
+-----------
+load trainingX with shape = (11953, 30)
+load testingX with shape = (3411, 30)
+-----------
+[300, 2, 0.5]:0117-020043
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=2, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=300, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.962038352302,0117-020051
+
+[300, 2, 'auto']:0117-020051
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=2, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=300, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.962017428977,0117-020109
+
+[300, 3, 0.5]:0117-020109
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=3, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=300, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961306931636,0117-020122
+
+[300, 3, 'auto']:0117-020122
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=3, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=300, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961105356269,0117-020148
+
+[300, 4, 0.5]:0117-020148
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=4, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=300, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.959015495809,0117-020205
+
+[300, 4, 'auto']:0117-020205
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=4, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=300, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.958261026187,0117-020239
+
+[400, 2, 0.5]:0117-020239
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=2, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=400, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961931709126,0117-020251
+
+[400, 2, 'auto']:0117-020251
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=2, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=400, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961872299792,0117-020315
+
+[400, 3, 0.5]:0117-020315
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=3, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=400, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961165553141,0117-020333
+
+[400, 3, 'auto']:0117-020333
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=3, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=400, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.960493373241,0117-020413
+
+[400, 4, 0.5]:0117-020413
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=4, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=400, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.957959900459,0117-020447
+
+[400, 4, 'auto']:0117-020447
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=4, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=400, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.957174217459,0117-020555
+
+[500, 2, 0.5]:0117-020555
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=2, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=500, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961780935963,0117-020617
+
+[500, 2, 'auto']:0117-020617
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=2, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=500, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.961788856136,0117-020701
+
+[500, 3, 0.5]:0117-020701
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=3, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=500, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.960574783108,0117-020733
+
+[500, 3, 'auto']:0117-020733
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=3, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=500, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.959862039414,0117-020836
+
+[500, 4, 0.5]:0117-020836
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=4, max_features=0.5, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=500, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.956955841896,0117-020918
+
+[500, 4, 'auto']:0117-020918
+GradientBoostingClassifier(init=None, learning_rate=0.1, loss=deviance,
+              max_depth=4, max_features=auto, min_samples_leaf=1,
+              min_samples_split=2, n_estimators=500, random_state=1126,
+              subsample=1.0, verbose=0)
+ =0.956479170608,0117-021041
+
+best:[300, 2, 0.5] 0.962038352302
+[ 0.02571669  0.00045555  0.02653278  0.04488313  0.01403452  0.04316486
+  0.01375972  0.0145923   0.04682985  0.04536414  0.04456972  0.01696209
+  0.0052641   0.02776688  0.05612095  0.01300123  0.00866532  0.02417146
+  0.0019257   0.02977009  0.05584098  0.12199834  0.00271149  0.18864129
+  0.01552263  0.03043507  0.00046222  0.0510775   0.02290722  0.00685216]
