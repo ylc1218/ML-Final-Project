@@ -1,0 +1,35 @@
+python svm.py track2
+load trainingX with shape = (96434, 36)
+load testingX with shape = (24108, 36)
+scaled
+[0.5, 0.1]
+0.866768970868
+[0.5, 1]
+0.800547534217
+[0.5, 5]
+0.793309413818
+[0.5, 10]
+0.793319783497
+[1, 0.1]
+0.86727709267
+[1, 1]
+0.850706157884
+[1, 5]
+0.792407239911
+[1, 10]
+0.792645748444
+[5, 0.1]
+0.863896533207
+[5, 1]
+0.841020786776
+[5, 5]
+0.782535204902
+[5, 10]
+0.783976608034
+[10, 0.1]
+/usr/lib/python2.7/dist-packages/sklearn/svm/base.py:206: ConvergenceWarning: Solver terminated early (max_iter=1000000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.
+0.862071442271
+[10, 1]
+0.836188466331
+[10, 5]
+0.778957626914
