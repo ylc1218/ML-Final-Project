@@ -228,7 +228,7 @@ Before 2.7 & 0.876931 & 0.883062 & 0.890716\tabularnewline
 \section{Models}
 
 In this section we introduce how we compose our models for dropout
-prediction and how we evaluate them. All the following expriments
+prediction and how we evaluate them. All the following experiments
 are running in Python using Scikit-learn \cite{key-2} 1.4. We adopt
 5-fold cross-validation to evaluate the performance of each model,
 and use different error measures based on different tracks: 
@@ -256,7 +256,7 @@ WA(g)=\frac{\sum_{n=1}^{N}c_{n}^{-1}\left\llbracket g(n^{th}enrollment)=y_{n}\ri
 ,where $c_{n}=$ total number of courses the student of the $n^{th}$
 enrollment takes.\\
 It means that wrong predictions on different enrollments receive different
-penalties, hence we assign sample weights in track2 by the following
+penalties, hence we assign sample weights in track 2 by the following
 approach.
 \end{itemize}
 Benefited from Scikit-learn, we can easily adopt cross-validation
@@ -382,7 +382,7 @@ K\left(\mathbf{\mathbf{x_{i}},x_{j}}\right)=\exp\left(-\gamma\left\Vert \mathbf{
 \]
 
 
-By adjusting the penalty paremeter $C$ and $\gamma$ in RBF kernel
+By adjusting the penalty parameter $C$ and $\gamma$ in RBF kernel
 while remaining all other parameters as default, we get numerical
 results in Table \ref{result of svm} by cross-validation.
 
@@ -538,17 +538,10 @@ and Table \ref{result of GBDT in track2}.
 
 Besides using different models for training, we also tried other methods
 such as data clustering and model blending to achieve better performance.
-Methods we used can be divided into three main categories: 
-\begin{enumerate}
-\item Clustering: Group similar enrollments into the same group, train each
-group individually and combine the results. 
-\item Blending: Use techniques such as Uniform blending and Stacking to
-blend outcomes from different models. 
-\item Predict track 2 by results of track 1: Outputs of track 1 are real
-numbers between {[}0,1{]}. A naïve way to convert probability into
-track 2's 0/1 prediction is using 0.5 as threshold. We put effort
-in obtaining a better threshold. 
-\end{enumerate}
+Methods we used can be divided into three main categories, which are
+\textit{clustering}, \textit{blending} and \textit{Predict track 2
+by results of track 1}.
+
 In this section, we are going to explain our implementations of these
 three methods. Features used throughout this section are 30-dimension
 features presented in Section 2. 
@@ -749,10 +742,10 @@ A naïve way to convert probability into track 2's 0/1 prediction is
 using 0.5 as threshold. Dropout probabilities less than 0.5 are predicted
 as 0, otherwise 1. However, we may obtain a better result by finding
 a more appropriate threshold. Our approach was to sort track 1's best
-result (with hightest public score) together with track 2's best result
-by track 1's prediction. We wanted to set the threshold at point \textit{p}
-where enrollments were mainly predicted as 0 for track 2 while track
-1's predicted probabilities are less than \textit{p}. 
+result (with the highest public score) together with track 2's best
+result by track 1's prediction. We wanted to set the threshold at
+point \textit{p} where enrollments were mainly predicted as 0 for
+track 2 while track 1's predicted probabilities are less than \textit{p}. 
 
 Our implementation was: 
 \begin{enumerate}
@@ -769,8 +762,10 @@ from public score=0.884253(threshold=0.5) to public score=0.885174.
 
 \section{Evaluation}
 
-In this section we evalutate the efficiency, scalability and performance
-of each model.
+In this section we evaluate the efficiency, scalability and performance
+of each model. Our experiments are conducted on a single machine with
+24-core processor and 32GB RAM running Ubuntu 15.04. The code files
+and logs are available at our github repository \cite{key-6}.
 
 
 \subsection{Efficiency}
@@ -784,7 +779,7 @@ find that linear models, such as linear SVM and LR, cost much less
 time compared to other models, while RF and SVM cost most time among
 these models. Because SVM needs to construct testing data with RBF
 kernel, it costs most predicting time compared to others. ``Paralleled
-RF'' means RF paralleled with five cores while ``RF'' is not paralled. 
+RF'' means RF paralleled with five cores while ``RF'' is not paralleledd. 
 
 \begin{table}[H]
 \centering{}%
@@ -820,23 +815,29 @@ has the best scalability. However, paralleled RF has poorer scalability
 compared to unparalleled RF. 
 
 \begin{figure}[h]
-\includegraphics[width=1\columnwidth]{/Users/EJHSU/Desktop/figure1}\caption{Running time of each model with different number of training data}
+\begin{centering}
+\includegraphics[width=0.8\columnwidth]{figure1}\caption{Running time of each model with different number of training data}
 
+\par\end{centering}
 
 \centering{}\label{Figure of efficiency }
 \end{figure}
 
 
 \begin{figure}[h]
-\includegraphics[width=1\columnwidth]{/Users/EJHSU/Desktop/figure3}\caption{Ratio of time each model spent with different number of training data}
+\begin{centering}
+\includegraphics[width=0.8\columnwidth]{figure3}\caption{Ratio of time each model spent with different number of training data}
 
+\par\end{centering}
 
 \centering{}\label{Figure: ratio of time each model spent on each training data}
 \end{figure}
 \begin{figure}[h]
-\includegraphics[width=1\columnwidth]{/Users/EJHSU/Desktop/figure2}\caption{ratio of time each model spent with different number of training data
+\begin{centering}
+\includegraphics[width=0.8\columnwidth]{figure2}\caption{ratio of time each model spent with different number of training data
 (without SVM)}
 
+\par\end{centering}
 
 \centering{}\label{Figure: ratio of time each model spent on each training data (without SVM)}
 \end{figure}
@@ -877,7 +878,7 @@ GBDT & 0.967517 & 0.967517 & 0.884398 & 0.888709\tabularnewline
 \section{Conclusion}
 
 We elaborate many useful features in this competition, and compare
-the efficiency, scalability, performace between different models.
+the efficiency, scalability, performance between different models.
 By applying blending and Stacking methods, we achieve private score
 = 0.967723 (rank 18) in track 1 and private score = 0.890957 (rank
 8) in track 2 on the final scoreboard.
@@ -893,6 +894,8 @@ Classification. J. Mach. Learn. Res. 9 (June 2008), 1871-1874.
 library for support vector machines. ACM Trans. Intell. Syst. Technol.
 2, 3, Article 27 (May 2011), 27 pages. 
 
-\bibitem{key-6}\end{thebibliography}
+\bibitem{key-6}ML-Final-Project. https://github.com/ylc1218/ML-Final-Project
+
+\bibitem{key-1}\end{thebibliography}
 
 \end{document}
